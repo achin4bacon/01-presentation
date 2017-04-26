@@ -1,0 +1,129 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <title>Prolog!</title>
+    <style>
+/*idk what kind of comments you want for this assignment in particular. this is styling the page using CSS.*/
+div {
+    font-family: Courier New, Courier, monospace;
+    color: #373737;
+    text-align: center;
+}
+h3 {
+    color: #C0B283;
+    text-shadow: #373737;
+    letter-spacing: 5px;
+}
+h1 {
+    color: #373737;
+    text-shadow: 12px 12px 8px #C0B283;
+    letter-spacing: 5px;
+}
+body {
+    background: linear-gradient(to right, #DCD0C0 , #F4F4F4);
+}
+img.resize
+{
+   max-width:50%;
+   max-height:50%;
+   float: left;
+   margin: 10px;
+   box-shadow: 8px 8px 10px #aaa;
+}
+img.france {
+    border-radius: 50%;
+    float: right;
+    margin: 10px;
+    box-shadow: 8px 8px 10px #aaa;
+}
+img.harryyy {
+    max-width:50%;
+    max-height:50%;
+    border-radius: 50%;
+    float: right;
+    margin: 10px;
+    box-shadow: 8px 8px 10px #aaa;
+}
+hr { 
+  border : 0;
+  height: 1px; 
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); 
+}
+    </style>
+</head>
+
+<body>
+    <!--this is the body of the HTML. this is where text about Prolog goes.-->
+    <div id="paraOne">
+        <p class="top"><h1>What is Prolog?!</h1></p>
+        Declarative vs. procedural programming
+        <br>
+        High-level programming 
+        <br>
+        Based on formal logic--defining then solving logical formulas.
+        <br> Facts (end in .) -- Rules (end in :- ) -- Queries (user input, begins with ? -)
+    </div>
+
+    <div id="paraTwo">
+        <img class="france" src="https://s-media-cache-ak0.pinimg.com/originals/72/a1/11/72a111e1eb3df16bbbe10954413beee4.jpg" alt="Pepe!">
+       <br><br><br><br><br>
+       <hr>
+       <p class="top"><h3>About Prolog</h3></p>
+        <button type="button" onclick="runMethod1()">WHO: </button> Phillippe Roussel
+        <br>
+        <button type="button" onclick="runMethod3()"> WHEN:</button> 1971
+        <br>
+        <button type="button" onclick="runMethod2()">WHERE:</button> Marseilles, France! 
+        <br>
+        <button type="button" onclick="runMethod4()">WHY: </button> Designed to implement a man-machine communication system in natural language. 
+        Short for <u>Pro</u>grammation en <u>Log</u>ique
+        </p>
+    </div>
+    <hr>
+    <br><br><br><br><br>
+    <div id="paraThree">
+        <br>
+        <img class="resize" src="https://i.ytimg.com/vi/_19pRsZRiz4/maxresdefault.jpg"  alt="Haley Joel Osmet">
+        <br><br><br><br><br>
+        <hr>
+        <p class="mid"><h3>Uses and Application</h3></p>
+        Used for Artificial Intelligence, especially expert systems.<br><br><i>"Expert Systems" are computer systems that can mimic the actions of a human expert.
+            <br><tab><tab>i.e. a program that can diagnose a patient similar to a doctor.</i><hr>
+    </div>
+    <div id="paraFour"><br><br>
+    <img class="harryyy" src="http://i0.kym-cdn.com/photos/images/original/000/317/565/189.jpg" alt="Poor Harry">
+        <p><br><br><hr><p class=bot><h3>Example!</h3></p>
+        loves(ron,hermione).<br>
+        loves(harry,hermione).<br>
+        loves(voldemort,nagini).<br>
+        loves(hagrid,madameMaxime).<br>
+        jealous(X,Y):- loves(X,Z), loves(Y,Z) <br>
+        <i> //:- refers to if/implied by</i> <br>
+        ?- loves(voldemort,nagini)<br>
+        Yes<br>
+        ?- loves(ron,nagini)<br>
+        No<br> 
+        ?- jealous(ron,W) <br><i>//Can you find who Ron would be jealous of?</i><br>
+        W = harry<br>
+        <hr>
+        </p>
+    </div>
+
+<script>
+    // This is using javascript to make alert functions for buttons.
+function runMethod1() {
+    alert("He sounds French!");
+}
+function runMethod2() {
+    alert("(OUI OUI!)");
+}
+function runMethod3() {
+    alert(2017-1971 + " years ago!"); 
+}
+function runMethod4() {
+    alert("Logic!")
+}
+</script>
+</body>
+</html>
